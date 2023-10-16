@@ -16,7 +16,7 @@ metadata:
     app: client-ingress
 spec:
   rules:
-  - host: "argocd.shinhansec-pda.net"
+  - host: "client.shinhansec-pda.net"
     http:
       paths:
       - pathType: Prefix

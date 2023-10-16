@@ -3,5 +3,7 @@ kind: Kustomization
 images:
 - name: /
   newName: /
+- name: client-app
+  newTag: main-459408b284340342ca448883249e45b97daa864d
 resources:
 - ../../resources

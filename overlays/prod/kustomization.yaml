@@ -3,10 +3,5 @@ kind: Kustomization
 images:
 - name: /
   newName: /
-- name: 686710509719.dkr.ecr.ap-northeast-2.amazonaws.com/pda-project
-  newName: 686710509719.dkr.ecr.ap-northeast-2.amazonaws.com/pda-project
-  newTag: "20231016161113"
-- name: client-app
-  newTag: main-
 resources:
 - ../../resources

@@ -2,7 +2,7 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: client-ingress
-  namespace: kdb
+  namespace: team-2
   annotations:
     kubernetes.io/ingress.class: alb
     alb.ingress.kubernetes.io/scheme: internet-facing
@@ -16,7 +16,7 @@ metadata:
     app: client-ingress
 spec:
   rules:
-  - host: "client.shinhansec-pda.net"
+  - host: "team-2.shinhansec-pda.net"
     http:
       paths:
       - pathType: Prefix

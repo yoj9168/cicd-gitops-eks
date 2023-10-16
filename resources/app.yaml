@@ -1,8 +1,8 @@
 apiVersion: apps/v1
-kind: Deployment
+kind: Deployment # 리소스의 종류
 metadata:
   name: client-app
-  namespace: kdb
+  namespace: team-2
 spec:
   replicas: 1
   selector:
@@ -21,23 +21,23 @@ spec:
               - key: alpha.eksctl.io/nodegroup-name
                 operator: In
                 values:
-                - ng-5      
+                - ng-2      
       containers:
       - name: client-app
-        image: 686710509719.dkr.ecr.ap-northeast-2.amazonaws.com/pda-project:20231016161113
+        image: 686710509719.dkr.ecr.ap-northeast-2.amazonaws.com/team-2:20231016161113 #ECR 레파지토리
         imagePullPolicy: IfNotPresent
         resources:
-          requests:
+          requests: #컨테이너가 어떤 자원을 가질것인지 정의
             cpu: "100m"
             memory: "128Mi"
         ports:
-        - containerPort: 80
+        - containerPort: 80 #컨테이너가 가지는 포트
 --- 
 apiVersion: v1
 kind: Service
 metadata:
   name: client-service
-  namespace: kdb
+  namespace: team-2
 spec:
   type: NodePort
   selector:

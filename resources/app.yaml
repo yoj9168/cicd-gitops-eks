@@ -24,14 +24,14 @@ spec:
                 - ng-2      
       containers:
       - name: client-app
-        image: 686710509719.dkr.ecr.ap-northeast-2.amazonaws.com/team-2:main-f7959af6079c5d986cb84fa6eef8f2c805dd823b #ECR 레파지토리
+        image: 686710509719.dkr.ecr.ap-northeast-2.amazonaws.com/team-2:20231018173026 #ECR 레파지토리
         imagePullPolicy: IfNotPresent
         resources:
           requests: #컨테이너가 어떤 자원을 가질것인지 정의
             cpu: "100m"
             memory: "128Mi"
         ports:
-        - containerPort: 80 #컨테이너가 가지는 포트
+        - containerPort: 3000 #컨테이너가 가지는 포트
 --- 
 apiVersion: v1
 kind: Service
@@ -46,4 +46,4 @@ spec:
   - name: http
     protocol: TCP
     port: 80
-    targetPort: 80
+    targetPort: 3000

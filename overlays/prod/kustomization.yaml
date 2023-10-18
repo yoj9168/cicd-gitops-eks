@@ -4,6 +4,6 @@ images:
 - name: /
   newName: /
 - name: client-app
-  newTag: main-5e83a0409d768be4213e98f045cc9b64bce904da
+  newTag: main-f1d6daece038f297fc83e6a3a0059995347c8ad9
 resources:
 - ../../resources

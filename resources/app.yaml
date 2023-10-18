@@ -25,6 +25,7 @@ spec:
       containers:
       - name: client-app
         image: 686710509719.dkr.ecr.ap-northeast-2.amazonaws.com/team-2:20231018173026 #ECR 레파지토리
+
         imagePullPolicy: IfNotPresent
         resources:
           requests: #컨테이너가 어떤 자원을 가질것인지 정의
